@@ -59,7 +59,7 @@ set_keybindings() {
     # Move to monitor down: disable <Super><Shift>Down
     dconf write ${KEYS_GNOME_WM}/move-to-monitor-down "@as []"
 
-    # Super + direction keys, move window left and right monitors, or up and down workspaces
+    #Super + direction keys, move window left and right monitors, or up and down workspaces
     # Move window one monitor to the left
     dconf write ${KEYS_GNOME_WM}/move-to-monitor-left "@as []"
     # Move window one workspace down
@@ -96,6 +96,45 @@ set_keybindings() {
 
     # Close Window
     dconf write ${KEYS_GNOME_WM}/close "['<Super>q', '<Alt>F4']"
+
+    # Personalization
+    # Launch tilix
+    dconf write ${KEYS_MEDIA}/custom0/binding "['<Shift><Super>Return']"
+    dconf write ${KEYS_MEDIA}/custom0/command "['tilix']"
+    dconf write ${KEYS_MEDIA}/custom0/name "['Tilix']"
+    # Switch to workspace n
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-1 "['<Super>1']"
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-2 "['<Super>2']"
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-3 "['<Super>3']"
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-4 "['<Super>4']"
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-5 "['<Super>5']"
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-6 "['<Super>6']"
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-7 "['<Super>7']"
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-8 "['<Super>8']"
+    dconf write ${KEYS_GNOME_WM}/switch-to-workspace-9 "['<Super>9']"
+    # Move to workspace n
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-1 "['<Shift><Super>1']"
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-2 "['<Shift><Super>2']"
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-3 "['<Shift><Super>3']"
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-4 "['<Shift><Super>4']"
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-5 "['<Shift><Super>5']"
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-6 "['<Shift><Super>6']"
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-7 "['<Shift><Super>7']"
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-8 "['<Shift><Super>8']"
+    dconf write ${KEYS_GNOME_WM}/move-to-workspace-9 "['<Shift><Super>9']"
+    # Run dialog
+    dconf write ${KEYS_GNOME_WM}/panel-run-dialog "['<Super>r']"
+    # Disable switch to application
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-1 "@as []"
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-2 "@as []"
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-3 "@as []"
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-4 "@as []"
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-5 "@as []"
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-6 "@as []"
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-7 "@as []"
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-8 "@as []"
+    dconf write ${KEYS_GNOME_SHELL}/switch-to-application-9 "@as []"
+
 }
 
 if ! command -v gnome-extensions >/dev/null; then
@@ -117,3 +156,4 @@ fi
 
 # Workspaces spanning displays works better with Pop Shell
 dconf write /org/gnome/mutter/workspaces-only-on-primary false
+
