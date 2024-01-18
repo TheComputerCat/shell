@@ -98,10 +98,6 @@ set_keybindings() {
     dconf write ${KEYS_GNOME_WM}/close "['<Super>q', '<Alt>F4']"
 
     # Personalization
-    # Launch tilix
-    dconf write ${KEYS_MEDIA}/custom-keybindings/custom0/binding "['<Shift><Super>Return']"
-    dconf write ${KEYS_MEDIA}/custom-keybindings/custom0/command "['tilix']"
-    dconf write ${KEYS_MEDIA}/custom-keybindings/custom0/name "['Tilix']"
     # Switch to workspace n
     dconf write ${KEYS_GNOME_WM}/switch-to-workspace-1 "['<Super>1']"
     dconf write ${KEYS_GNOME_WM}/switch-to-workspace-2 "['<Super>2']"
